@@ -1,10 +1,11 @@
 import BooksList from './BooksList';
+import BookForm from './BookForm';
 
 const App = () => {
   return (
     <div>
       <BooksList />
-      {/* <BooksForm /> */}
+      <BookForm />
     </div>
   );
 };
