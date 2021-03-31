@@ -1,5 +1,11 @@
+import { CREATE_BOOK, REMOVE_BOOK} from '../actions'
+
 const bookReducer = (state = [], action) => {
-  return state;
+  switch (action.type) {
+    case CREATE_BOOK: return [...state,action.payload];
+    case REMOVE_BOOK: return state.filter( (book) => book.id !== action.payload);
+    default: return state;
+  }
 };
 
 export default bookReducer;
