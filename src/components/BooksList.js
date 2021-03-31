@@ -3,7 +3,7 @@ import Book from './Book';
 
 const BooksList = (props) => {
   const displayBooks = props.books.map((book) => {
-    return <Book book={book} />;
+    return <Book key={book.id} book={book} />;
   });
 
   return (
