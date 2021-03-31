@@ -1,3 +1,5 @@
-export const bookReducer = (state, action) => {
+const bookReducer = (state = [], action) => {
+  return state;
+};
 
-}
+export default bookReducer;

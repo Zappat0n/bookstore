@@ -1,18 +1,27 @@
+import { connect } from 'react-redux';
 
 const BooksList = () => {
   const displayBooks = () => {
-    let books = []
+    let books = [];
     return books;
-  }
+  };
 
-  return(
+  return (
     <table>
       <tr>
         <th>Id</th>
         <th>Title</th>
         <th>Category</th>
       </tr>
-      {displayBooks()}
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>My Book</td>
+          <td>Any</td>
+        </tr>
+      </tbody>
     </table>
-  )
-}
+  );
+};
+
+export default connect()(BooksList);
