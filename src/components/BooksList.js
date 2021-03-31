@@ -1,27 +1,27 @@
 import { connect } from 'react-redux';
+import Book from './Book';
 
-const BooksList = () => {
-  const displayBooks = () => {
-    let books = [];
-    return books;
-  };
+const BooksList = (props) => {
+  const displayBooks = props.books.map((book) => {
+    return <Book book={book} />;
+  });
 
   return (
     <table>
-      <tr>
-        <th>Id</th>
-        <th>Title</th>
-        <th>Category</th>
-      </tr>
-      <tbody>
+      <thead>
         <tr>
-          <td>1</td>
-          <td>My Book</td>
-          <td>Any</td>
+          <th>Id</th>
+          <th>Title</th>
+          <th>Category</th>
         </tr>
-      </tbody>
+      </thead>
+      <tbody>{displayBooks}</tbody>
     </table>
   );
 };
 
-export default connect()(BooksList);
+const mapStateToProps = (state) => {
+  return { books: state.bookReducer };
+};
+
+export default connect(mapStateToProps)(BooksList);

@@ -23,7 +23,9 @@ class BookForm extends Component {
           <select name="categories">
             <option value="">Please choose an option</option>
             {categories.map((cate) => (
-              <option value={cate}>{cate}</option>
+              <option key={cate} value={cate}>
+                {cate}
+              </option>
             ))}
           </select>
         </div>

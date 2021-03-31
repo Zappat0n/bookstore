@@ -5,28 +5,28 @@ import { createStore } from 'redux';
 import rootReducer from './reducers';
 import App from './components/App';
 
-export const initialState = {
-  books: [
+const initialState = {
+  bookReducer: [
     {
       id: Math.random(),
       title: 'Quixote',
-      category: 'Action'
+      category: 'Action',
     },
     {
       id: Math.random(),
       title: 'Hamlet',
-      category: 'Biography'
+      category: 'Biography',
     },
     {
       id: Math.random(),
       title: 'The history of the universe',
-      category: 'Sci-Fi'
+      category: 'Sci-Fi',
     },
-  ]
-}
+  ],
+};
 
 ReactDOM.render(
-  <Provider store={createStore(rootReducer)}>
+  <Provider store={createStore(rootReducer, initialState)}>
     <React.StrictMode>
       <App />
     </React.StrictMode>
