@@ -1,10 +1,11 @@
+import React from 'react';
 import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
 import Book from './Book';
 
 const BooksList = (props) => {
-  const displayBooks = props.books.map((book) => {
-    return <Book key={book.id} book={book} />;
-  });
+  const { books } = props;
+  const displayBooks = books.map((book) => <Book key={book.id} book={book} />);
 
   return (
     <table>
@@ -20,8 +21,9 @@ const BooksList = (props) => {
   );
 };
 
-const mapStateToProps = (state) => {
-  return { books: state.bookReducer };
+BooksList.propTypes = {
+  books: PropTypes.instanceOf(Array).isRequired,
 };
+const mapStateToProps = (state) => ({ books: state.bookReducer });
 
 export default connect(mapStateToProps)(BooksList);

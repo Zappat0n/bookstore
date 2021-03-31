@@ -12,12 +12,34 @@ const categories = [
 ];
 
 class BookForm extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      title: '',
+    };
+  }
+
+  handleChange = (event) => {
+    event.preventDefault();
+    this.setState({ title: event.target.value });
+  };
+
   render() {
+    const { title } = this.state;
     return (
       <form>
         <div>
-          <label>Title</label>
-          <input type="text" />
+          <label htmlFor="book-title">
+            Title
+            <input
+              type="text"
+              id="book-title"
+              name="book-title"
+              value={title}
+              onChange={this.handleChange}
+            />
+          </label>
         </div>
         <br />
         <div>
