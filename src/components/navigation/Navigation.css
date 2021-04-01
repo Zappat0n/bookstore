@@ -1,9 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;700&display=swap');
 
-.navigation {
+.navigation-wraper {
   padding: 0 30px;
   height: 100px;
   border-bottom: 1px solid rgb(233, 233, 233);
+  display: flex;
+  align-items: center;
+}
+
+.navigation {
+  width: 1200px;
+  margin: 0 auto;
 }
 
 .ml {
