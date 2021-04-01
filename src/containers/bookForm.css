@@ -29,8 +29,7 @@ form {
 }
 
 .title-input input,
-.submit-button,
-.book-categories {
+.submit-button {
   border: 1px solid #e8e8e8;
   padding: 15px 20px;
   outline: none;
@@ -38,10 +37,13 @@ form {
 }
 
 .book-categories {
+  border: 1px solid #e8e8e8;
+  padding: 12px 20px;
   width: 350px;
-  font-size: 16px;
+  font-size: 14px;
   font-family: Montserrat, sans-serif;
   color: #c4c4c4;
+  border-radius: 4px;
 }
 
 .title-input input:focus,
