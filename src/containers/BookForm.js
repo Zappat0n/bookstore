@@ -23,12 +23,13 @@ class BookForm extends Component {
 
   handleChange = (event) => {
     event.preventDefault();
-    this.setState({ title: event.target.value });
-  };
+    if (event.target.name === 'book-title') {
+      this.setState({ title: event.target.value });
+    }
 
-  handleCategoryChange = (event) => {
-    event.preventDefault();
-    this.setState({ category: event.target.value });
+    if (event.target.name === 'categories') {
+      this.setState({ category: event.target.value });
+    }
   };
 
   render() {
@@ -44,6 +45,7 @@ class BookForm extends Component {
               name="book-title"
               value={title}
               onChange={this.handleChange}
+              required
             />
           </label>
         </div>
@@ -52,7 +54,7 @@ class BookForm extends Component {
           <select
             name="categories"
             value={category}
-            onChange={this.handleCategoryChange}
+            onChange={this.handleChange}
           >
             <option value="">Please choose an option</option>
             {categories.map((cate) => (
