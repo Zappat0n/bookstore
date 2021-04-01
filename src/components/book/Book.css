@@ -53,6 +53,10 @@
   background: white;
 }
 
+.link:hover {
+  cursor: pointer;
+}
+
 .left-side .author {
   margin-bottom: 12px;
 }
@@ -157,4 +161,8 @@
   letter-spacing: 0.5px;
   text-align: center;
   color: white;
+}
+
+.right-side button:hover {
+  cursor: pointer;
 }
