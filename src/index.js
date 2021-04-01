@@ -23,6 +23,7 @@ const initialState = {
       category: 'Sci-Fi',
     },
   ],
+  filterReducer: 'All',
 };
 
 ReactDOM.render(

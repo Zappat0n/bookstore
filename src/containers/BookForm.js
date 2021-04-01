@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import * as actions from '../actions';
 import './bookForm.css';
 
-const categories = [
+export const categories = [
   'Action',
   'Biography',
   'History',
@@ -69,7 +69,6 @@ class BookForm extends Component {
             value={category}
             onChange={this.handleChange}
           >
-            <option value="">Please choose an option</option>
             {categories.map((cate) => (
               <option key={cate} value={cate}>
                 {cate}
