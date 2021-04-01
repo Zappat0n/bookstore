@@ -16,7 +16,6 @@ const CategoryFilter = (props) => {
   return (
     <div>
       <select name="categories" value={category} onChange={handleFilterChange}>
-        <option value="">Please choose an option</option>
         {filters.map((cate) => (
           <option key={cate} value={cate}>
             {cate}

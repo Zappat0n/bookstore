@@ -13,7 +13,7 @@ const BooksList = (props) => {
   };
 
   const displayBooks = () => {
-    if (bookFilter === 'All') {
+    if (bookFilter === 'All' || '') {
       return books.map((book) => (
         <Book key={book.id} book={book} handleChange={handleRemoveBook} />
       ));
