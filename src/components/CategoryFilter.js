@@ -32,6 +32,8 @@ CategoryFilter.propTypes = {
   changeFilter: PropTypes.func.isRequired,
 };
 
-const mapStateToProps = (state) => ({ category: state.filterReducer });
+const mapStateToProps = (state) => ({
+  category: state.filterReducer,
+});
 
 export default connect(mapStateToProps, action)(CategoryFilter);

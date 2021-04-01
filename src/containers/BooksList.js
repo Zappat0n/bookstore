@@ -6,15 +6,24 @@ import * as actions from '../actions';
 import CategoryFilter from '../components/CategoryFilter';
 
 const BooksList = (props) => {
-  const { books } = props;
+  const { books, bookFilter } = props;
   const handleRemoveBook = (event, book) => {
     event.preventDefault();
     props.removeBook(book.id);
   };
 
-  const displayBooks = books.map(
-    (book) => <Book key={book.id} book={book} handleChange={handleRemoveBook} />,
-  );
+  const displayBooks = () => {
+    if (bookFilter === 'All') {
+      return books.map((book) => (
+        <Book key={book.id} book={book} handleChange={handleRemoveBook} />
+      ));
+    }
+    return books
+      .filter((book) => book.category === bookFilter)
+      .map((book) => (
+        <Book key={book.id} book={book} handleChange={handleRemoveBook} />
+      ));
+  };
 
   return (
     <>
@@ -27,7 +36,7 @@ const BooksList = (props) => {
             <th>Remove</th>
           </tr>
         </thead>
-        <tbody>{displayBooks}</tbody>
+        <tbody>{displayBooks()}</tbody>
       </table>
       <CategoryFilter />
     </>
@@ -37,7 +46,11 @@ const BooksList = (props) => {
 BooksList.propTypes = {
   books: PropTypes.instanceOf(Array).isRequired,
   removeBook: PropTypes.func.isRequired,
+  bookFilter: PropTypes.string.isRequired,
 };
-const mapStateToProps = (state) => ({ books: state.bookReducer });
+const mapStateToProps = (state) => ({
+  books: state.bookReducer,
+  bookFilter: state.filterReducer,
+});
 
 export default connect(mapStateToProps, actions)(BooksList);
