@@ -46,6 +46,10 @@ form {
   border-radius: 4px;
 }
 
+.book-categories:hover {
+  cursor: pointer;
+}
+
 .title-input input:focus,
 .book-categories:focus {
   outline: none;

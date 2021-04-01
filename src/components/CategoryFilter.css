@@ -11,3 +11,7 @@
   font-size: 18px;
   color: #6e6e6e;
 }
+
+.category-filter:hover {
+  cursor: pointer;
+}
