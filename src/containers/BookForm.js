@@ -1,4 +1,7 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
+import * as actions from '../actions';
 import './bookForm.css';
 
 const categories = [
@@ -32,10 +35,20 @@ class BookForm extends Component {
     }
   };
 
+  handleSubmit = (event) => {
+    event.preventDefault();
+    const { title, category } = this.state;
+    const { createBook } = this.props;
+    const id = Math.random();
+    const newBook = { id, title, category };
+    createBook(newBook);
+    this.setState({ title: '', category: '' });
+  };
+
   render() {
     const { title, category } = this.state;
     return (
-      <form>
+      <form onSubmit={(event) => this.handleSubmit(event)}>
         <div>
           <label htmlFor="book-title">
             Title
@@ -71,4 +84,8 @@ class BookForm extends Component {
   }
 }
 
-export default BookForm;
+BookForm.propTypes = {
+  createBook: PropTypes.func.isRequired,
+};
+
+export default connect(null, actions)(BookForm);
