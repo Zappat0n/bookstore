@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import Book from '../components/Book';
 import * as actions from '../actions';
+import CategoryFilter from '../components/CategoryFilter';
 
 const BooksList = (props) => {
   const { books } = props;
@@ -16,17 +17,20 @@ const BooksList = (props) => {
   );
 
   return (
-    <table>
-      <thead>
-        <tr>
-          <th>Id</th>
-          <th>Title</th>
-          <th>Category</th>
-          <th>Remove</th>
-        </tr>
-      </thead>
-      <tbody>{displayBooks}</tbody>
-    </table>
+    <>
+      <table>
+        <thead>
+          <tr>
+            <th>Id</th>
+            <th>Title</th>
+            <th>Category</th>
+            <th>Remove</th>
+          </tr>
+        </thead>
+        <tbody>{displayBooks}</tbody>
+      </table>
+      <CategoryFilter />
+    </>
   );
 };
 
