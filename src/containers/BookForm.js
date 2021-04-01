@@ -17,6 +17,7 @@ class BookForm extends Component {
 
     this.state = {
       title: '',
+      category: '',
     };
   }
 
@@ -25,8 +26,13 @@ class BookForm extends Component {
     this.setState({ title: event.target.value });
   };
 
+  handleCategoryChange = (event) => {
+    event.preventDefault();
+    this.setState({ category: event.target.value });
+  };
+
   render() {
-    const { title } = this.state;
+    const { title, category } = this.state;
     return (
       <form>
         <div>
@@ -43,7 +49,11 @@ class BookForm extends Component {
         </div>
         <br />
         <div>
-          <select name="categories">
+          <select
+            name="categories"
+            value={category}
+            onChange={this.handleCategoryChange}
+          >
             <option value="">Please choose an option</option>
             {categories.map((cate) => (
               <option key={cate} value={cate}>
