@@ -6,7 +6,6 @@
   border-radius: 4px;
   border: solid 1px #e8e8e8;
   background-color: white;
-
   display: flex;
   justify-content: space-around;
 }
@@ -20,7 +19,7 @@
 .left-side .category {
   margin: 0 39px 0 0;
   opacity: 0.5;
-  font-family: Montserrat;
+  font-family: Montserrat, sans-serif;
   font-size: 14px;
   font-weight: bold;
   font-style: normal;
@@ -30,6 +29,7 @@
 }
 
 .left-side .title {
+  width: 100%;
   margin: 3px 323px 0 0;
   font-family: 'Roboto Slab', serif;
   font-size: 22px;
@@ -42,7 +42,7 @@
 
 .left-side .link {
   margin: 4px 0 0;
-  font-family: RobotoSlab;
+  font-family: RobotoSlab, serif;
   font-size: 14px;
   font-weight: 300;
   font-style: normal;
@@ -123,7 +123,7 @@
 .right-side .current-chapter {
   margin: 1px 58px 0 59px;
   opacity: 0.5;
-  font-family: RobotoSlab;
+  font-family: RobotoSlab, serif;
   font-size: 13px;
   font-weight: 300;
   font-style: normal;
@@ -134,7 +134,7 @@
 
 .right-side .chapter {
   margin: 7px 109px 4px 59px;
-  font-family: RobotoSlab;
+  font-family: RobotoSlab, serif;
   font-size: 16px;
   font-weight: 300;
   font-style: normal;
@@ -149,8 +149,7 @@
   border: 1px solid #0290ff;
   border-radius: 3px;
   background-color: #0290ff;
-
-  font-family: RobotoSlab;
+  font-family: RobotoSlab, serif;
   font-size: 13px;
   font-weight: 300;
   font-style: normal;
@@ -158,5 +157,4 @@
   letter-spacing: 0.5px;
   text-align: center;
   color: white;
-
 }
