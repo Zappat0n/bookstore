@@ -2,8 +2,8 @@ import React from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import Book from '../components/book/Book';
+import CategoryFilter from '../components/CategoryFilter';
 import * as actions from '../actions';
-// import CategoryFilter from '../components/CategoryFilter';
 
 import './BookList.css';
 
@@ -29,10 +29,12 @@ const BooksList = (props) => {
 
   return (
     <div className="bookList">
+      <div className="book-filter">
+        <CategoryFilter />
+      </div>
       <div className="table">
         <div className="table-body">{displayBooks()}</div>
       </div>
-      {/* <CategoryFilter /> */}
     </div>
   );
 };
