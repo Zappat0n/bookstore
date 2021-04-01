@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import * as actions from '../actions';
 import './bookForm.css';
 
-const categories = [
+export const categories = [
   'Action',
   'Biography',
   'History',
