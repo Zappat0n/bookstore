@@ -1,0 +1,14 @@
+.select-wrapper {
+  position: relative;
+}
+
+.select {
+  appearance: none;
+}
+
+.select-wrapper i {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  color: lightgray;
+}

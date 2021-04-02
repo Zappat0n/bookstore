@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import * as actions from '../actions';
 import './bookForm.css';
+import Select from '../components/Select';
 
 export const categories = [
   'Action',
@@ -63,7 +64,7 @@ class BookForm extends Component {
             />
           </div>
           <div className="right-selection">
-            <select
+            <Select
               name="categories"
               value={category}
               onChange={this.handleChange}
@@ -74,7 +75,13 @@ class BookForm extends Component {
                   {cate}
                 </option>
               ))}
-            </select>
+            </Select>
+            {/* <Selector
+              options={cate}
+              name="categories"
+              value={category}
+              classes={['book-categories']}
+            /> */}
             <button className="submit-button" type="submit">
               ADD BOOK
             </button>
