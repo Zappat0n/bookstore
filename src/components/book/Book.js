@@ -1,13 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Progress from '../Progress';
-// import progressPicture from '../../assets/progress.png';
 import './Book.css';
 
 const Book = (props) => {
   const { book, handleChange } = props;
   const progressPercentage = Math.floor(Math.random() * 90);
-  const currentChapter = Math.floor(Math.random() * 10);
+  const currentChapter = Math.floor(Math.random() * 20);
   return (
     <div className="Lesson-Panel">
       <div className="left-side">
@@ -28,11 +27,6 @@ const Book = (props) => {
       </div>
       <div className="center-side">
         <div>
-          {/* <img
-            className="progress-picture"
-            src={progressPicture}
-            alt="progress"
-          /> */}
           <Progress percentage={progressPercentage} size={65} />
         </div>
         <div className="right">
