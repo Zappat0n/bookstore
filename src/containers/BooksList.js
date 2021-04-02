@@ -1,9 +1,11 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
-import Book from '../components/Book';
-import * as actions from '../actions';
+import Book from '../components/book/Book';
 import CategoryFilter from '../components/CategoryFilter';
+import * as actions from '../actions';
+
+import './BookList.css';
 
 const BooksList = (props) => {
   const { books, bookFilter } = props;
@@ -26,20 +28,14 @@ const BooksList = (props) => {
   };
 
   return (
-    <>
-      <table>
-        <thead>
-          <tr>
-            <th>Id</th>
-            <th>Title</th>
-            <th>Category</th>
-            <th>Remove</th>
-          </tr>
-        </thead>
-        <tbody>{displayBooks()}</tbody>
-      </table>
-      <CategoryFilter />
-    </>
+    <div className="bookList">
+      <div className="book-filter">
+        <CategoryFilter />
+      </div>
+      <div className="table">
+        <div className="table-body">{displayBooks()}</div>
+      </div>
+    </div>
   );
 };
 

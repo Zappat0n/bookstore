@@ -2,15 +2,7 @@
 
 # Magic Bookstore
 
-![Top Page Screenshot](./screenshots/milestone3.png)
-
-## About the Project
-
-Bookstore built using [React](https://reactjs.org/) and [Redux](https://redux.js.org/).
-
-Project specifications made by [Microverse](https://www.microverse.org/).
-
-Magic-books Inc. is a company based in Germany. They want a front-end of an application that will help them organize and manage their bookstore. It has to be fast, dynamic and responsive to their actions.
+![Top Page Screenshot](./screenshots/milestone5.png)
 
 ## Table of Contents
 
@@ -24,13 +16,24 @@ Magic-books Inc. is a company based in Germany. They want a front-end of an appl
 - [License](#license)
 - [Acknowledgements](#acknowledgements)
 
+## About the Project
+
+Bookstore built using [React](https://reactjs.org/) and [Redux](https://redux.js.org/).
+
+Project specifications made by [Microverse](https://www.microverse.org/).
+
+Magic-books Inc. is a company based in Germany. They want a front-end of an application that will help them organize and manage their bookstore. It has to be fast, dynamic and responsive to their actions.
+
+In the application you are able to add new books of different categories and filter the displayed books by category.
+
 ## Built With
 
 - [JavaScript](https://en.wikipedia.org/wiki/JavaScript)
 - [React](https://reactjs.org/)
+- [Redux](https://redux.js.org/)
 - [Node package manager](https://www.npmjs.com/)
 - [HTML5](https://en.wikipedia.org/wiki/HTML5)
-- [SASS(SCSS)](https://sass-lang.com/)
+- [CSS](https://www.w3schools.com/Css/)
 
 ## Live Demo
 
@@ -86,3 +89,4 @@ This project is [MIT](./LICENSE) licensed.
 ## Acknowledgements
 
 - [React](https://reactjs.org/)
+- [Redux](https://redux.js.org/)

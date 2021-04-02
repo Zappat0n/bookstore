@@ -3,19 +3,25 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import * as action from '../actions';
 import { categories } from '../containers/BookForm';
+import './CategoryFilter.css';
 
 const CategoryFilter = (props) => {
   const { category, changeFilter } = props;
 
-  const filters = [...categories, 'All'];
+  const filters = ['All', ...categories];
 
   const handleFilterChange = (event) => {
     changeFilter(event.target.value);
   };
 
   return (
-    <div>
-      <select name="categories" value={category} onChange={handleFilterChange}>
+    <div className="mt">
+      <select
+        name="categories"
+        value={category}
+        onChange={handleFilterChange}
+        className="category-filter"
+      >
         {filters.map((cate) => (
           <option key={cate} value={cate}>
             {cate}
