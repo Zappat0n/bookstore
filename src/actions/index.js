@@ -18,5 +18,10 @@ const changeFilter = (filter) => ({
 });
 
 export {
-  createBook, CREATE_BOOK, removeBook, REMOVE_BOOK, CHANGE_FILTER, changeFilter,
+  createBook,
+  CREATE_BOOK,
+  removeBook,
+  REMOVE_BOOK,
+  CHANGE_FILTER,
+  changeFilter,
 };
