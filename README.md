@@ -41,7 +41,7 @@ In the application you are able to add new books of different categories and fil
 
 ## Live Demo
 
-[Live Demo Link](https://thawing-oasis-30945.herokuapp.com/)
+[Live Demo Link](https://magic-bookstore111.herokuapp.com/)
 
 ## Getting Started
 
