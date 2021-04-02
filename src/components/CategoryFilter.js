@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import * as action from '../actions';
 import { categories } from '../containers/BookForm';
+import Select from './Select';
 import './CategoryFilter.css';
 
 const CategoryFilter = (props) => {
@@ -16,7 +17,7 @@ const CategoryFilter = (props) => {
 
   return (
     <div className="mt">
-      <select
+      <Select
         name="categories"
         value={category}
         onChange={handleFilterChange}
@@ -27,7 +28,7 @@ const CategoryFilter = (props) => {
             {cate}
           </option>
         ))}
-      </select>
+      </Select>
     </div>
   );
 };
