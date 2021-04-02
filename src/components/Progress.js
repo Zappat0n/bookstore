@@ -1,10 +1,12 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 
+import './Progress.css';
+
 export default class Progress extends PureComponent {
   render() {
     const { percentage, size } = this.props;
-    const strokeWidth = 10;
+    const strokeWidth = 5;
     const radius = size / 2 - strokeWidth;
     const centerX = size / 2;
     const centerY = size / 2;
@@ -27,7 +29,7 @@ export default class Progress extends PureComponent {
         />
         <circle
           className="stroke"
-          stroke="#1abc9c"
+          stroke="#0290ff"
           strokeWidth={strokeWidth}
           fill="transparent"
           r={radius}
